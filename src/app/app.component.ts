@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Post} from "./model/Post";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mon-blog-angular';
+  title = 'Posts';
+  posts: Array<Post> = [
+    new Post('Mon premier titre', 'mon contenu', 1),
+    new Post('Mon deuxième titre', 'mon contenu', -5),
+    new Post('Mon troisième titre', 'mon contenu', 0)
+  ]
 }
