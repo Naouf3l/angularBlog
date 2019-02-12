@@ -1,0 +1,24 @@
+<div class="card">
+  <li class="list-group-item" [ngClass]="{'list-group-item-success':loveIts>0,
+                                        'list-group-item-danger':loveIts<0}">
+    <div>
+      <div class="row">
+        <h2 class="col">{{title}}</h2>
+        <p class="col" align="right">{{created_at|date: 'short'}}</p>
+      </div>
+
+      <p>{{content}}</p>
+
+      <div class="btn-toolbar">
+        <button class="btn btn-success"
+                (click)="onLoveIt()">Love it!
+        </button>
+
+        <button class="btn btn-danger"
+                (click)="onDontLoveIt()">Don't love it!
+        </button>
+      </div>
+    </div>
+
+  </li>
+</div>
